@@ -1,0 +1,228 @@
+body {
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Noto Sans JP", sans-serif;
+
+}
+
+nav {
+    width: 100%;
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.spinner-master * {
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+/*SECOND VERSION*/
+
+.ham{
+    display: none;
+}
+
+.spinner-master2 * {
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.spinner-master2 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+.spinner-master2 input[type=checkbox] {
+    display: none;
+}
+
+.spinner-master2 label {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 0;
+}
+
+.spinner-master2 .spinner2 {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: #FF983B;
+    border-radius: 5px;
+}
+
+.spinner-master2 .diagonal.part-1 {
+    position: relative;
+    float: left;
+}
+
+.spinner-master2 .horizontal {
+    position: relative;
+    float: left;
+    margin-top: 7px;
+}
+
+.spinner-master2 .diagonal.part-2 {
+    position: relative;
+    float: left;
+    margin-top: 6px;
+}
+
+.spinner-master2 input[type=checkbox]:checked~.spinner-spin2>.horizontal {
+    opacity: 0;
+}
+
+.spinner-master2 input[type=checkbox]:checked~.spinner-spin2>.diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 10px;
+}
+
+.spinner-master2 input[type=checkbox]:checked~.spinner-spin2>.diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -16px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo1{
+    color: #FF983B;
+}
+
+.logo2{
+    color: #BE7867;
+}
+
+.menu {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    height: 70px;
+}
+
+.menu-link {
+    margin-right: 20px;
+    padding-top: 23px;
+}
+
+.menu-link:hover {
+    border-top: 4px solid #FF983B;
+    padding-top: 19px;
+}
+
+.menu-link>a:hover {
+    color: #FF983B;
+}
+
+.menu-link>a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu-link>a:active {
+    color: #FF983B;
+}
+
+.hero {
+    height: 95vh;
+    background: url("./images/1106.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    margin-left: 60px;
+}
+
+.hero-banner{
+    color: #000;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.hero span {
+    color: #FF983B;
+}
+
+.hero p {
+    color: #000;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.hero a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18.5px;
+    background-color: rgb(192, 98, 15);
+    padding: 13px;
+    border-radius: 3px;
+}
+
+.hero a:hover{
+    background-color: #FF983B;
+}
+
+.pop-wiches{
+    height: 500px;
+    background-color: #FFF;
+}
+
+.pop-banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.pop-banner a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18.5px;
+    background-color: rgb(192, 98, 15);
+    padding: 13px;
+    border-radius: 3px;
+}
+
+.pop-banner a:hover {
+    background-color: #FF983B;
+}
+
+.wich-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.wich-cards{
+    text-align: center;
+}
+
+.wich-cards img{
+    height: 200px;
+    width: 300px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+}
